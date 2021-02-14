@@ -1,0 +1,1404 @@
+{
+	"info": {
+		"_postman_id": "a59bdba6-ba81-4a37-9143-71c8d94a5b50",
+		"name": "Aliany",
+		"description": "Proyectos de Aliany",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bank-System",
+			"item": [
+				{
+					"name": "Account Holders",
+					"item": [
+						{
+							"name": "http://localhost:8080/account/holders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/account/holders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"holders"
+									]
+								},
+								"description": "Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/account/holders/1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/account/holders/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"holders",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Mayor 24",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Aliany\",\r\n    \"dateOfBirth\": \"1986-01-28\",\r\n    \"primaryAddressId\": 1,\r\n    \"userId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/account/holders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"holders"
+									]
+								},
+								"description": "Create Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "Menor 24",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Aliany\",\r\n    \"dateOfBirth\": \"2000-01-28\",\r\n    \"primaryAddressId\": 1,\r\n    \"userId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/account/holders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"holders"
+									]
+								},
+								"description": "Create Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/account/holders/1",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"account1\",\r\n    \"balanceQty\": 123.4,\r\n    \"primaryOwnerId\": 2,\r\n    \"minimumBalanceQty\": 101,\r\n    \"interestRate\": 0.4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/account/holders/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"holders",
+										"1"
+									]
+								},
+								"description": "Update Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/account/holders/1",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/account/holders/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"holders",
+										"1"
+									]
+								},
+								"description": "Delete Checking"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Account",
+					"item": [
+						{
+							"name": "http://localhost:8080/account",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account"
+									]
+								},
+								"description": "Accounts"
+							},
+							"response": []
+						},
+						{
+							"name": "Balance Saving",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/account/balance?iban=ES4900499101257060704878",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"balance"
+									],
+									"query": [
+										{
+											"key": "iban",
+											"value": "ES4900499101257060704878"
+										}
+									]
+								},
+								"description": "Accounts"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/account/1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/account/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"4"
+									]
+								},
+								"description": "Get By Id"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"account1\",\r\n    \"balanceQty\": 48.4,\r\n    \"primaryOwnerId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account"
+									]
+								},
+								"description": "Create an Account"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/account/4",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"account1\",\r\n    \"balanceQty\": 123.4,\r\n     \"primaryOwnerId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/account/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"5"
+									]
+								},
+								"description": "Update Account"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/account/4",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/account/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"4"
+									]
+								},
+								"description": "Delete Account"
+							},
+							"response": []
+						},
+						{
+							"name": "Balance Credit Card",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/account/balance?iban=ES8200498210844092787667",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"balance"
+									],
+									"query": [
+										{
+											"key": "iban",
+											"value": "ES8200498210844092787667"
+										}
+									]
+								},
+								"description": "Balance Credit Card"
+							},
+							"response": []
+						},
+						{
+							"name": "Balance Checking",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/account/balance?iban=ES9200493002276171495579",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"balance"
+									],
+									"query": [
+										{
+											"key": "iban",
+											"value": "ES9200493002276171495579"
+										}
+									]
+								},
+								"description": "Balance Credit Card"
+							},
+							"response": []
+						},
+						{
+							"name": "Balance Student Checking",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/account/balance?iban=ES6900492917845890986933",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"account",
+										"balance"
+									],
+									"query": [
+										{
+											"key": "iban",
+											"value": "ES6900492917845890986933"
+										}
+									]
+								},
+								"description": "Balance Credit Card"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Checking",
+					"item": [
+						{
+							"name": "http://localhost:8080/checking",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/checking",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"checking"
+									]
+								},
+								"description": "Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "Menor 24",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"balanceQty\": 600,\r\n    \"primaryOwnerId\": 2,\r\n    \"secondaryOwnerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/checking",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"checking"
+									]
+								},
+								"description": "Create Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "Mayor 24",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"balanceQty\": 3678,\r\n    \"primaryOwnerId\": 1,\r\n    \"creationDate\": \"2020-02-13\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/checking",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"checking"
+									]
+								},
+								"description": "Create Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/checking/13",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"account1\",\r\n    \"balanceQty\": 123.4,\r\n    \"primaryOwnerId\": 1,\r\n    \"minimumBalanceQty\": 400\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/checking/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"checking",
+										"5"
+									]
+								},
+								"description": "Update Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/checking/13",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/checking/13",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"checking",
+										"13"
+									]
+								},
+								"description": "Delete Checking"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "StudentChecking",
+					"item": [
+						{
+							"name": "http://localhost:8080/checking",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/studentchecking",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"studentchecking"
+									]
+								},
+								"description": "Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/checking",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"account1\",\r\n    \"balanceQty\": 578.4,\r\n    \"primaryOwnerId\": 2,\r\n    \"secretKey\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/studentchecking",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"studentchecking"
+									]
+								},
+								"description": "Create Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/checking/13",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"account1\",\r\n    \"balanceQty\": 123.4,\r\n    \"primaryOwnerId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/studentchecking/15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"studentchecking",
+										"15"
+									]
+								},
+								"description": "Update Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/checking/13",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/studentchecking/15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"studentchecking",
+										"15"
+									]
+								},
+								"description": "Delete Checking"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Saving",
+					"item": [
+						{
+							"name": "http://localhost:8080/saving",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/saving",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"saving"
+									]
+								},
+								"description": "Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/saving",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"balanceQty\": 578.4,\r\n    \"primaryOwnerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/saving",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"saving"
+									]
+								},
+								"description": "Create Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/saving/13",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/saving/16",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"saving",
+										"16"
+									]
+								},
+								"description": "Update Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/saving/13",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/saving/16",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"saving",
+										"16"
+									]
+								},
+								"description": "Delete Checking"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CreditCard",
+					"item": [
+						{
+							"name": "http://localhost:8080/saving",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/saving",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"saving"
+									]
+								},
+								"description": "Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/credit-card",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"balanceQty\": 1000,\r\n    \"primaryOwnerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/credit-card",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"credit-card"
+									]
+								},
+								"description": "Create Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/saving/13",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/saving/16",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"saving",
+										"16"
+									]
+								},
+								"description": "Update Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/saving/13",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/saving/16",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"saving",
+										"16"
+									]
+								},
+								"description": "Delete Checking"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "http://localhost:8080/users",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "Aliany",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								},
+								"description": "Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/users/1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"1"
+									]
+								},
+								"description": "Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "Mayor 24",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"ali\",\r\n    \"password\": \"123456\",\r\n    \"rol\": \"ADMIN\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								},
+								"description": "Create Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "Menor 24",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"anaminor\",\r\n    \"password\": \"2wer567\",\r\n    \"rol\": \"ACCOUNTHOLDERS\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								},
+								"description": "Create Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/users/1",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"anaaccount\",\r\n    \"password\": \"2wer567\",\r\n    \"rol\": \"ADMIN\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"1"
+									]
+								},
+								"description": "Update Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/users/1",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"1"
+									]
+								},
+								"description": "Delete Checking"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Address",
+					"item": [
+						{
+							"name": "http://localhost:8080/address",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "Aliany",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/address",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"address"
+									]
+								},
+								"description": "Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/address/1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/address/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"address",
+										"1"
+									]
+								},
+								"description": "Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/address",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"address\": \"Madrid\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/address",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"address"
+									]
+								},
+								"description": "Create Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/address/1",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "   {\r\n        \"id\": 3,\r\n        \"address\": \"Malaga\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/address/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"address",
+										"1"
+									]
+								},
+								"description": "Update Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/address/1",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/address/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"address",
+										"1"
+									]
+								},
+								"description": "Delete Checking"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ThirdParty",
+					"item": [
+						{
+							"name": "External Transfer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "hashedKey",
+										"value": "$2a$10$QdsH88T5FvPJ9thlPQ1VSOX4U.D392Pn.3gK0P1WNQntRS7vw87M.1",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountToId\": 1,\r\n    \"accountFromSecretKey\": \"77b4a0913f305264365b23db443eb12c\",\r\n    \"amountQty\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/external/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"external",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transfer",
+					"item": [
+						{
+							"name": "http://localhost:8080/transfer",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transfer"
+									]
+								},
+								"description": "Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/transfer/1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/transfer/28",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transfer",
+										"28"
+									]
+								},
+								"description": "Checking"
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/transfer",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ibanFrom\": \"ES9200493002276171495579\",\r\n    \"concept\": \"Pension\",\r\n    \"amountQty\": 100,\r\n    \"ibanTo\": \"ES6900492917845890986933\",\r\n    \"accountToName\": \"Aliany\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transfer"
+									]
+								},
+								"description": "Create Checking"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
