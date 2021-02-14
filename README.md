@@ -10,24 +10,24 @@ Las cuentas en Crypto International Bank tienen algunas características que deb
 
 Los mayores de 24 años de edad podrán tener cuentas de tipo Checking, Savings y CreditCard , mientras que los menores de 24 años tendrán una cuenta StudentChecking, pero también pueden tener cuentas de tipos Savings y CreditCard.
 
-###Checking
+### Checking
 Las cuentas corrientes tienen un saldo mínimo de €250 y una tarifa de mantenimiento mensual de €12.
 
-###Savings
+### Savings
 Las cuentas de ahorro tienen una tasa de interés predeterminada de 0,0025, pero pueden instanciarse con una tasa de interés diferente a la predeterminada, con una tasa de interés máxima de 0.5%
 Las cuentas de ahorro deben tener un saldo mínimo predeterminado de €1000, pero pueden crearse instancias de cuentas de ahorro con un saldo mínimo de menos de €1000 pero no menos de 100.
 
-###CreditCard
+### CreditCard
 Las cuentas de tarjeta de crédito tienen un límite de crédito predeterminado de €100, pero se puede instanciar con un creditLimit superior a €100 pero no superior a €100000.
 Además, Las tarjetas de crédito tienen una tasa de interés predeterminada de 0,2%, pero se pueden  instanciar con una tasa de interés inferior a 0,2% pero no inferior a 0,1%.
 
 ---
 
-###Multas
+### Multas
 Existe una penalización fija para todas las cuentas de €40.
 Cuando el saldo de una cuenta cae por debajo del saldo mínimo establecido (en este caso €250) se le deducirán automáticamente €40 al saldo de la cuenta. Mientras el saldo de la cuenta permanezca por debajo del saldo mínimo no se aplicara nuevamente la penalización.
 
-###Tasas de interés
+### Tasas de interés
 Los intereses de las cuentas de ahorro se agregan anualmente al saldo de la cuenta.
 Pasado 1 año o más desde la fecha de creada de la cuenta de ahorro se le suman al saldo de la cuenta los intereses obtenidos.
 Sin embargo, Los intereses de las tarjetas de crédito se agregan mensualmente al saldo de la cuenta.
@@ -44,7 +44,7 @@ Nota: Si no existen transferencias en la base de datos con fechas de una semana 
 
 ---
 
-###Usuarios de la aplicación
+### Usuarios de la aplicación
 La aplicación tiene 3 tipos de usuarios: administradores y titulares de cuentas(ACCOUNTHOLDERS y THIRDPARTY).
 
 Los administradores son los responsables de crear y eliminar usuarios, titulares de cuentas y nuevas cuentas. Al crear una nueva cuenta, pueden crear cuentas de cheques, ahorros o tarjetas de crédito. Además, pueden acceder al saldo de cualquier cuenta y modificarlo.
@@ -56,14 +56,14 @@ Los Usuarios de terceros también pueden realizar trasferencias a otras cuentas,
 
 ---
 
-###Documentación de la API
+### Documentación de la API
 Para la documentación de la API se utilizó Swagger:
 http://localhost:8080/swagger-ui.html
 
 ---
 
-###Diagrama de Base de datos
+### Diagrama de Base de datos
 ![Class Diagram](docs/diagrams/diagram-BD.png)
 
-###Diagrama de Clases
+### Diagrama de Clases
 ![Class Diagram](docs/diagrams/class-diagram.png)
